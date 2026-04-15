@@ -8,10 +8,10 @@ Y="\e[33m"
 CHECK(){
     if [ $1 -ne 0 ]
     then
-        echo "$2 ... $R Failed"
+        echo -e "$2 ... $R Failed"
         exit 1
     else
-        echo "$2 ... $G Sucess"
+        echo -e "$2 ... $G Sucess"
     fi
 }
 
@@ -22,12 +22,12 @@ then
 fi
 
 dnf list installed mysql
-if [$? -ne 0]
+if [ $? -ne 0 ]
 then 
     dnf instll mysql -y
     CHECK $? "Installating mysql"
 else
-    echo "mysql already... $Y installed"
+    echo -e "mysql already... $Y installed"
 fi
 
 dnf list installed git
@@ -36,5 +36,5 @@ then
     dnf install git -y
     CHECK $? "Installing Git"
 else
-    echo "Git already.... $Y installed"
+    echo -e "Git already.... $Y installed"
 fi
