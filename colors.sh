@@ -39,3 +39,12 @@ then
 else
     echo -e "Git already.... $Y installed"
 fi
+
+dnf list installed httpd
+if [ $? -ne 0 ] 
+then 
+    dnf install httpd -y
+    CHECK $? "Installing Httpd"
+else
+    echo -e "httpd already $Y Installed"
+fi
