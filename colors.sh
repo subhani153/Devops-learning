@@ -37,7 +37,7 @@ then
     dnf install git -y
     CHECK $? "Installing Git"
 else
-    echo -e "Git already.... $Y installed"
+    echo -e "Git already.... $Y installed $N"
 fi
 
 dnf list installed httpd
