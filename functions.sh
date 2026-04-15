@@ -12,7 +12,7 @@ CHECK(){
     fi
 }
 
-if [ $USERID -e 0 ]
+if [ $USERID -ne 0 ]
 then 
     echo "Error:: You need sudo permission"
     exit 1
