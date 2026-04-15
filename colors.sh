@@ -27,7 +27,7 @@ then
     dnf instll mysql -y
     CHECK $? "Installating mysql"
 else
-    echo -e "mysql already... $Y installed"
+    echo -e "mysql already... $Y installed $N"
 fi
 
 dnf list installed git
