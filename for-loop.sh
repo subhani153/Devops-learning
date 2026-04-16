@@ -31,7 +31,7 @@ CHECK_ROOT(){
 
 echo "script stared executing at : $TIMESTAMP" &>>$LOG_FILE_NAME
 
-CHECK_ROOT
+
 
 for package in $@
 do
